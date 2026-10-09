@@ -26,39 +26,39 @@
     Z: "#5b3a2e", // sneaker brown
   };
 
-  // 16 x 26 sprite, facing right. "." = transparent.
+  // 16 x 27 sprite, facing right. "." = transparent.
   const BODY = [
-    ".....OOOOOO.....",
-    "...OOHHHHHHOO...",
-    "..OHHHHHHHHHHO..",
-    ".OHHHHhhHHHHHHO.",
-    ".OHHHHSSSSSHHHO.",
-    ".OHHHSSSSSSSHHO.",
-    ".OHHSSESSSESSHO.",
-    ".OHSSSESSSESSHO.",
-    ".OHSSMSSSSSMSHO.",
-    ".OHSSSSSRRSSSHO.",
-    ".OHhsSSSSSSshHO.",
-    ".OhHHsSSSSsHHhO.",
-    ".ONwhhTTTThhwNO.",
-    ".ONwhTTTTTThwNO.",
-    ".OSLTTTTTTTtOSO.",
-    ".OSLTTTTTTttOSO.",
-    ".LLLSSSSSSSSOSO.",
-    ".LLLJJJJJJJJOsO.",
-    ".OOOJJJJJJJJO...",
-    "...OJJJJJJJJO...",
-    "...OJJJjjJJJO...",
+    "......OOOO......",
+    "....OOHHHHOO....",
+    "...OHHHHHHHHO...",
+    "..OHHHHhhHHHHO..",
+    "..OHHHSSSSHHHO..",
+    "..OHHSSSSSSHHO..",
+    "..OHSESSSSESHO..",
+    "..OHSESSSSESHO..",
+    "..OHMSSSSSSMHO..",
+    "..OHSSSRRSSSHO..",
+    "..OHhSSSSSShHO..",
+    "..OhHHsSSsHHhO..",
+    "..ONhhTTTThhNO..",
+    "..OwhTTTTTThwO..",
+    "..OSOTTTTTTOSO..",
+    "..OLOTTTTTtOSO..",
+    "..OLOSSSSSSOSO..",
+    ".LLLOJJJJJJOsO..",
+    ".OOOOJJJJJJO....",
+    "....OJJJJJJO....",
+    "....OJJjjJJO....",
   ];
   const LEGS = {
-    stand: ["...OJJJOOJJJO...", "...OJJjOOjJJO...", "...OJJJOOJJJO...", "...OXZXOOXZXO...", "...OOOO..OOOO..."],
-    stride: ["...OJJJOOJJJO...", "..OJJJO..OJJJO..", "..OJJjO..OjJJO..", ".OXZXO....OXZXO.", ".OOOO......OOOO."],
-    liftR: ["...OJJJOOJJJO...", "...OJJJOOJJJO...", "...OJJjOOXZXO...", "...OXZXO.OOOO...", "...OOOO........."],
+    stand: ["....OJJOOJJO....", "....OJjOOjJO....", "....OJJOOJJO....", "....OJJOOJJO....", "....OXZOOZXO....", "....OOOOOOOO...."],
+    stride: ["....OJJOOJJO....", "...OJJO..OJJO...", "...OJjO..OjJO...", "..OJJO....OJJO..", "..OXZO....OZXO..", "..OOOO....OOOO.."],
+    liftR: ["....OJJOOJJO....", "....OJJOOJJO....", "....OJjOOjJO....", "....OJJOOXZO....", "....OXZO.OOO....", "....OOOO........"],
   };
   LEGS.liftL = LEGS.liftR.map((row) => [...row].reverse().join(""));
-  LEGS.jump = ["...OJJJOOJJJO...", "...OJJjOOjJJO...", "...OXZXOOXZXO...", "...OOOOOOOOOO...", "................"];
+  LEGS.jump = ["....OJJOOJJO....", "....OJjOOjJO....", "....OJJOOJJO....", "....OXZOOZXO....", "....OOOOOOOO....", "................"];
 
-  const W = 16, H = 26;
+  const W = 16, H = 27;
   const scale = innerWidth < 600 ? 3 : 4;
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
