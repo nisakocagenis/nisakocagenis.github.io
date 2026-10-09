@@ -4,54 +4,61 @@
    click or tap anywhere empty to send her there, click her to say hi.
    ========================================================= */
 (() => {
-  // Colors: long brown hair with lighter ends, black sleeveless turtleneck (like the photo)
+  // Outfit from the photo: light blue crop tee with navy striped sleeves,
+  // light-wash wide-leg jeans, black shoulder bag, white & brown sneakers
   const PALETTE = {
-    O: "#2a1a14", // outline
-    H: "#5b3523", // hair
-    h: "#9b6842", // hair highlight / lighter ends
-    S: "#f5d0b1", // skin
-    s: "#e2ad8b", // skin shadow
-    E: "#2a1a14", // eyes
-    M: "#f2a1a0", // blush
-    R: "#c4545c", // smile
-    B: "#1d1d24", // black top
-    b: "#3b3b4a", // top highlight
-    P: "#34425f", // trousers
-    W: "#f4efe6", // white sneakers
+    O: "#2e2130", // outline
+    H: "#7b5338", // hair
+    h: "#b88a5e", // hair highlights / lighter ends
+    S: "#f6d3b6", // skin
+    s: "#e6b394", // skin shadow
+    E: "#2e2130", // eyes
+    M: "#f4a6a6", // blush
+    R: "#d0707a", // smile
+    T: "#e4edfb", // light blue tee
+    t: "#c6d4ee", // tee shadow
+    N: "#26315e", // navy sleeves
+    w: "#ffffff", // white sleeve stripes
+    L: "#232129", // black bag and strap
+    J: "#a9c5e2", // light-wash jeans
+    j: "#87a6ca", // jeans shadow
+    X: "#f7f4ee", // sneaker white
+    Z: "#5b3a2e", // sneaker brown
   };
 
-  // 16 x 24 sprite, facing right. "." = transparent.
+  // 16 x 26 sprite, facing right. "." = transparent.
   const BODY = [
     ".....OOOOOO.....",
     "...OOHHHHHHOO...",
     "..OHHHHHHHHHHO..",
-    ".OHHHHHHHHHHHHO.",
-    ".OHHhhHHHHHHHHO.",
-    ".OHHHHSSSSSSHHO.",
+    ".OHHHHhhHHHHHHO.",
+    ".OHHHHSSSSSHHHO.",
+    ".OHHHSSSSSSSHHO.",
     ".OHHSSESSSESSHO.",
     ".OHSSSESSSESSHO.",
     ".OHSSMSSSSSMSHO.",
-    ".OHSSSSRSSRSSHO.",
-    ".OHhsSSSRRSshHO.",
-    "..OhHHBBBBHHhO..",
-    "..OhHBBBBBBHhO..",
-    "..OhSBBBBBBShO..",
-    "...hSBBBBBBSh...",
-    "...OSBBBBBBSO...",
-    "...OSBbBBBBSO...",
-    "...OsBBBBBBsO...",
-    "....OPPPPPPO....",
-    "....OPPPPPPO....",
+    ".OHSSSSSRRSSSHO.",
+    ".OHhsSSSSSSshHO.",
+    ".OhHHsSSSSsHHhO.",
+    ".ONwhhTTTThhwNO.",
+    ".ONwhTTTTTThwNO.",
+    ".OSLTTTTTTTtOSO.",
+    ".OSLTTTTTTttOSO.",
+    ".LLLSSSSSSSSOSO.",
+    ".LLLJJJJJJJJOsO.",
+    ".OOOJJJJJJJJO...",
+    "...OJJJJJJJJO...",
+    "...OJJJjjJJJO...",
   ];
   const LEGS = {
-    stand: ["....OPPOOPPO....", "....OPPOOPPO....", "....OWWOOWWO....", "....OOOOOOOO...."],
-    stride: ["....OPPOOPPO....", "...OPPO..OPPO...", "...OWWO..OWWO...", "...OOOO..OOOO..."],
-    liftR: ["....OPPOOPPO....", "....OPPOOWWO....", "....OWWO.OOO....", "....OOOO........"],
+    stand: ["...OJJJOOJJJO...", "...OJJjOOjJJO...", "...OJJJOOJJJO...", "...OXZXOOXZXO...", "...OOOO..OOOO..."],
+    stride: ["...OJJJOOJJJO...", "..OJJJO..OJJJO..", "..OJJjO..OjJJO..", ".OXZXO....OXZXO.", ".OOOO......OOOO."],
+    liftR: ["...OJJJOOJJJO...", "...OJJJOOJJJO...", "...OJJjOOXZXO...", "...OXZXO.OOOO...", "...OOOO........."],
   };
   LEGS.liftL = LEGS.liftR.map((row) => [...row].reverse().join(""));
-  LEGS.jump = ["....OPPOOPPO....", "....OWWOOWWO....", "....OOOOOOOO....", "................"];
+  LEGS.jump = ["...OJJJOOJJJO...", "...OJJjOOjJJO...", "...OXZXOOXZXO...", "...OOOOOOOOOO...", "................"];
 
-  const W = 16, H = 24;
+  const W = 16, H = 26;
   const scale = innerWidth < 600 ? 3 : 4;
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
