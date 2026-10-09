@@ -7,35 +7,30 @@
   <meta name="description" content="Portfolio of Nisa Kocageniş, Computer Engineering student at Yaşar University and full-stack web developer.">
   <meta property="og:title" content="Nisa Kocageniş | Full-Stack Developer">
   <meta property="og:description" content="Computer Engineering student building web apps with React, Vue.js, .NET 8 and Django.">
-  <meta property="og:image" content="assets/images/profile.jpg">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <meta property="og:image" content="https://nisakocagenis.github.io/assets/images/profile.jpg">
+  <meta name="theme-color" content="#f6f2ea">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231c1a17'/><text x='50' y='68' font-family='Georgia,serif' font-size='54' fill='%23c9a46a' text-anchor='middle' font-style='italic'>N</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Background effects -->
-  <div class="progress" id="progress"></div>
-  <div class="blobs" aria-hidden="true">
-    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
-  </div>
-  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
-  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="nav" id="nav">
-    <a class="logo" href="#home">nisa<span>.dev</span></a>
-    <button class="burger" id="burger" aria-label="Open menu">☰</button>
+    <a class="logo" href="#home">Nisa <em>Kocageniş</em></a>
     <nav id="menu">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
+      <a href="#work">Work</a>
       <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <a class="nav-cv" href="cv/Nisa_Kocagenis_CV_EN.pdf" target="_blank">Résumé ↗</a>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
   </header>
 
   <main>
@@ -43,79 +38,79 @@
     <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-text">
-        <p class="hello">Hi there, I'm <span class="wave">👋</span></p>
-        <h1 class="name">Nisa Kocageniş</h1>
-        <p class="role">I'm a <span class="typed" id="typed">Full-Stack Developer</span><span class="caret">|</span></p>
-        <p class="intro">Computer Engineering student at Yaşar University who loves turning ideas into
-          colorful, working web apps with React, Vue.js, .NET 8 and Django.</p>
-        <div class="buttons">
-          <a class="btn btn-glow confetti-btn" href="cv/Nisa_Kocagenis_CV_EN.pdf" target="_blank">📄 Download CV</a>
-          <a class="btn btn-ghost" href="https://github.com/nisakocagenis" target="_blank">GitHub</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/nisakocagenis/" target="_blank">LinkedIn</a>
+        <p class="eyebrow reveal">Portfolio · 2026</p>
+        <h1 class="reveal">Nisa<br><em>Kocageniş</em></h1>
+        <p class="lead reveal">Full-stack developer and Computer Engineering student, crafting
+          <em>thoughtful</em> web applications with React, .NET&nbsp;8 and Django.</p>
+        <div class="actions reveal">
+          <a class="btn btn-solid" href="cv/Nisa_Kocagenis_CV_EN.pdf" target="_blank">Download résumé</a>
+          <a class="btn btn-line" href="#work">See my work</a>
         </div>
       </div>
 
-      <div class="hero-photo">
-        <div class="ring"></div>
-        <img src="assets/images/profile.jpg" alt="Photo of Nisa Kocageniş">
-        <span class="sticker s1">⚛️ React</span>
-        <span class="sticker s2">🟣 .NET 8</span>
-        <span class="sticker s3">💚 Vue.js</span>
-        <span class="sticker s4">🐍 Python</span>
-      </div>
+      <figure class="portrait reveal">
+        <div class="arch">
+          <img src="assets/images/profile.jpg" alt="Portrait of Nisa Kocageniş">
+        </div>
+        <figcaption><span class="dot-live"></span> Open to opportunities · İzmir</figcaption>
+      </figure>
 
-      <a class="scroll-hint" href="#about" aria-label="Scroll down"><span></span></a>
+      <dl class="hero-meta reveal">
+        <div><dt>Currently</dt><dd>4th-year Computer Engineering, Yaşar University</dd></div>
+        <div><dt>Recently</dt><dd>Volunteer Intern at Uniteks</dd></div>
+        <div><dt>Focus</dt><dd>React · .NET 8 · Django · PostgreSQL</dd></div>
+      </dl>
     </section>
 
     <!-- MARQUEE -->
     <div class="marquee" aria-hidden="true">
       <div class="track">
-        <span>React</span><span>✦</span><span>Vue.js</span><span>✦</span><span>.NET 8</span><span>✦</span><span>Django</span><span>✦</span>
-        <span>PostgreSQL</span><span>✦</span><span>Tailwind CSS</span><span>✦</span><span>Next.js</span><span>✦</span><span>TypeScript</span><span>✦</span>
-        <span>React</span><span>✦</span><span>Vue.js</span><span>✦</span><span>.NET 8</span><span>✦</span><span>Django</span><span>✦</span>
-        <span>PostgreSQL</span><span>✦</span><span>Tailwind CSS</span><span>✦</span><span>Next.js</span><span>✦</span><span>TypeScript</span><span>✦</span>
+        <span>React</span><i>✦</i><span>Vue.js</span><i>✦</i><span>.NET 8</span><i>✦</i><span>Django</span><i>✦</i>
+        <span>PostgreSQL</span><i>✦</i><span>Next.js</span><i>✦</i><span>TypeScript</span><i>✦</i><span>Tailwind CSS</span><i>✦</i>
+        <span>React</span><i>✦</i><span>Vue.js</span><i>✦</i><span>.NET 8</span><i>✦</i><span>Django</span><i>✦</i>
+        <span>PostgreSQL</span><i>✦</i><span>Next.js</span><i>✦</i><span>TypeScript</span><i>✦</i><span>Tailwind CSS</span><i>✦</i>
       </div>
     </div>
 
     <!-- ABOUT -->
-    <section id="about">
-      <h2 class="title reveal"><span class="emoji">🌸</span> About Me</h2>
-      <div class="about-grid">
-        <div class="glass about-card reveal">
-          <p>I'm a <strong>4th-year Computer Engineering student</strong> at Yaşar University, also studying
-            Banking &amp; Insurance. I'm curious about software development, web technologies and
-            <strong>artificial intelligence</strong>.</p>
-          <p>Over three internships I've built real products: from a recruitment platform with
-            a .NET 8 API to low-code HR apps. I love teamwork, learning fast, and owning what I build.
-            Lately I've been building with AI-assisted tools like Claude Code and Codex.</p>
-          <p class="location">📍 Bornova, İzmir, Türkiye · 🗣️ Turkish (native), English (B2)</p>
-        </div>
+    <section id="about" class="split">
+      <header class="sec-head reveal">
+        <span class="num">01</span>
+        <h2>About</h2>
+      </header>
+      <div class="sec-body">
+        <p class="big reveal">I'm a fourth-year Computer Engineering student at Yaşar University, also studying
+          Banking &amp; Insurance. I care about software that feels <em>effortless</em> to use, and about the
+          clean architecture that makes it possible.</p>
+        <p class="reveal">Across three internships I've shipped real products: a recruitment platform with a
+          .NET&nbsp;8 API, low-code HR tools, and authentication flows. I enjoy teamwork, learn quickly, and
+          take ownership of what I build. Lately I've been building with AI-assisted tools like Claude Code and Codex.</p>
         <div class="stats">
-          <div class="stat glass reveal"><b class="count" data-to="3">0</b><span>Internships</span></div>
-          <div class="stat glass reveal"><b class="count" data-to="5">0</b><span>Projects</span></div>
-          <div class="stat glass reveal"><b class="count" data-to="2">0</b><span>Degree programs</span></div>
-          <div class="stat glass reveal"><b class="count" data-to="4">0</b><span>th year of CE</span></div>
+          <div class="stat reveal"><b class="count" data-to="3">0</b><span>Internships</span></div>
+          <div class="stat reveal"><b class="count" data-to="4">0</b><span>Projects</span></div>
+          <div class="stat reveal"><b class="count" data-to="2">0</b><span>Degree programs</span></div>
+          <div class="stat reveal"><b>B2</b><span>English</span></div>
         </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2 class="title reveal"><span class="emoji">💼</span> Experience</h2>
-      <div class="timeline">
+    <section id="experience" class="split">
+      <header class="sec-head reveal">
+        <span class="num">02</span>
+        <h2>Experience</h2>
+      </header>
+      <div class="sec-body">
 
-        <article class="t-item reveal">
-          <div class="dot" style="--c: var(--pink)"></div>
-          <div class="glass t-card">
-            <div class="t-head">
-              <h3>Volunteer Intern · <span class="grad">Uniteks</span></h3>
-              <span class="pill">Aug 2026 – Sep 2026</span>
-            </div>
-            <p class="t-sub">UNIT-X Recruitment Management Platform</p>
+        <article class="job reveal">
+          <div class="job-date">Aug — Sep 2026</div>
+          <div>
+            <h3>Volunteer Intern <span>· Uniteks</span></h3>
+            <p class="job-sub">UNIT-X Recruitment Management Platform</p>
             <ul>
               <li>Built a recruitment platform from scratch with separate interfaces for the HR team and job applicants.</li>
               <li>Modeled candidates as structured data instead of PDF CVs, creating a pool filterable by skills, experience and education.</li>
-              <li>Frontend in React + Tailwind CSS, service layer in .NET 8 Web API, database on Supabase (PostgreSQL).</li>
+              <li>Frontend in React and Tailwind CSS, service layer in .NET 8 Web API, database on Supabase (PostgreSQL).</li>
               <li>Migrated the project from a low-code platform to a custom-coded architecture.</li>
               <li>Designed the architecture of a candidate–job matching system that produces compatibility scores.</li>
             </ul>
@@ -123,14 +118,11 @@
           </div>
         </article>
 
-        <article class="t-item reveal">
-          <div class="dot" style="--c: var(--violet)"></div>
-          <div class="glass t-card">
-            <div class="t-head">
-              <h3>Intern · <span class="grad">Kuika Software</span></h3>
-              <span class="pill">Jun 2026 – Aug 2026</span>
-            </div>
-            <p class="t-sub">Kuika Low-Code Applications</p>
+        <article class="job reveal">
+          <div class="job-date">Jun — Aug 2026</div>
+          <div>
+            <h3>Intern <span>· Kuika Software</span></h3>
+            <p class="job-sub">Kuika Low-Code Applications</p>
             <ul>
               <li>Developed idea-sharing and HR management apps on the Kuika platform.</li>
               <li>Built idea submission, likes, comments, notifications, survey management and profile pages.</li>
@@ -140,14 +132,11 @@
           </div>
         </article>
 
-        <article class="t-item reveal">
-          <div class="dot" style="--c: var(--cyan)"></div>
-          <div class="glass t-card">
-            <div class="t-head">
-              <h3>Volunteer Intern · <span class="grad">N2Mobil</span></h3>
-              <span class="pill">Jul 2025 – Sep 2025</span>
-            </div>
-            <p class="t-sub">N2Mobil Takip Sistemleri A.Ş.</p>
+        <article class="job reveal">
+          <div class="job-date">Jul — Sep 2025</div>
+          <div>
+            <h3>Volunteer Intern <span>· N2Mobil</span></h3>
+            <p class="job-sub">N2Mobil Takip Sistemleri A.Ş.</p>
             <ul>
               <li>Designed and developed a web app with a user authentication system.</li>
               <li>Built the login screen and core user flows in a real project environment.</li>
@@ -160,170 +149,155 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2 class="title reveal"><span class="emoji">🚀</span> Projects</h2>
-      <p class="subtitle reveal">Things I've built, hover over them!</p>
-      <div class="projects">
+    <!-- WORK -->
+    <section id="work">
+      <header class="sec-head wide reveal">
+        <span class="num">03</span>
+        <h2>Selected <em>work</em></h2>
+      </header>
 
-        <!-- To add a new project, copy one <article class="project"> block. -->
-        <article class="project glass tilt reveal">
-          <div class="media">
-            <img src="assets/images/uniride.jpg" alt="UniRide homepage: Campus Car Sharing, Safe & Affordable" loading="lazy">
-            <span class="badge">Team project</span>
+      <!-- To add a project, copy one <article class="project"> block. -->
+      <article class="project reveal">
+        <a class="p-media" href="https://uniride-snowy.vercel.app/" target="_blank" aria-label="Open UniRide live demo">
+          <img src="assets/images/uniride.jpg" alt="UniRide homepage: Campus Car Sharing, Safe & Affordable" loading="lazy">
+        </a>
+        <div class="p-info">
+          <span class="p-index">01 / Team project</span>
+          <h3>UniRide</h3>
+          <p>A car-sharing platform made for university students: owners earn from idle cars, others find
+            safe, affordable rides near campus. Built on a microservices architecture as our COMP 3304
+            term project in a team of four.</p>
+          <div class="tags"><span>React</span><span>Node.js</span><span>Express</span><span>Microservices</span></div>
+          <div class="p-links">
+            <a href="https://uniride-snowy.vercel.app/" target="_blank">Live demo ↗</a>
+            <a href="https://github.com/nisakocagenis/uniride-teamwork" target="_blank">Source ↗</a>
           </div>
-          <div class="p-body">
-            <h3>🚗 UniRide</h3>
-            <p>A car-sharing platform just for university students. Students with cars earn extra income,
-              students without cars find safe rides near campus. Built with a microservices architecture
-              as our COMP 3304 term project (team of 4).</p>
-            <div class="tags"><span>React</span><span>Node.js</span><span>Express</span><span>Microservices</span></div>
-            <div class="links">
-              <a href="https://uniride-snowy.vercel.app/" target="_blank">Live demo ↗</a>
-              <a href="https://github.com/nisakocagenis/uniride-teamwork" target="_blank">Code ↗</a>
-            </div>
-          </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="project glass tilt reveal">
-          <div class="media">
-            <img src="assets/images/poyraz.jpg" alt="Poyraz Mobilya website homepage" loading="lazy">
+      <article class="project reverse reveal">
+        <a class="p-media" href="https://github.com/nisakocagenis/poyraz-mobilya" target="_blank" aria-label="Open Poyraz Mobilya source code">
+          <img src="assets/images/poyraz.jpg" alt="Poyraz Mobilya website homepage" loading="lazy">
+        </a>
+        <div class="p-info">
+          <span class="p-index">02 / Client website</span>
+          <h3>Poyraz Mobilya</h3>
+          <p>A complete website for a custom furniture studio, with an admin dashboard, a filterable project
+            gallery and media uploads behind JWT authentication.</p>
+          <div class="tags"><span>Next.js 14</span><span>TypeScript</span><span>Tailwind</span><span>MongoDB</span></div>
+          <div class="p-links">
+            <a href="https://github.com/nisakocagenis/poyraz-mobilya" target="_blank">Source ↗</a>
           </div>
-          <div class="p-body">
-            <h3>🛋️ Poyraz Mobilya</h3>
-            <p>A full website for a custom furniture company with an admin panel, project gallery,
-              category filtering and media uploads.</p>
-            <div class="tags"><span>Next.js 14</span><span>TypeScript</span><span>Tailwind</span><span>MongoDB</span><span>JWT</span></div>
-            <div class="links">
-              <a href="https://github.com/nisakocagenis/poyraz-mobilya" target="_blank">Code ↗</a>
-            </div>
-          </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="project glass tilt reveal">
-          <div class="media swap">
-            <img src="assets/images/todo-login.jpg" alt="Todo app login page" loading="lazy">
-            <img class="alt" src="assets/images/todo-list.jpg" alt="Todo app task list page" loading="lazy">
-            <span class="badge">Hover me</span>
+      <article class="project reveal">
+        <a class="p-media swap" href="https://github.com/nisakocagenis/Todo-app-task-N2mobil" target="_blank" aria-label="Open Todo App source code">
+          <img src="assets/images/todo-login.jpg" alt="Todo app login page" loading="lazy">
+          <img class="alt" src="assets/images/todo-list.jpg" alt="Todo app task list page" loading="lazy">
+        </a>
+        <div class="p-info">
+          <span class="p-index">03 / Internship</span>
+          <h3>Todo App</h3>
+          <p>Built during my N2Mobil internship: sign-up and login, to-do management, posts and photo
+            albums, powered by a Django REST API.</p>
+          <div class="tags"><span>Vue.js</span><span>Django REST</span><span>Auth</span></div>
+          <div class="p-links">
+            <a href="https://github.com/nisakocagenis/Todo-app-task-N2mobil" target="_blank">Source ↗</a>
           </div>
-          <div class="p-body">
-            <h3>✅ Todo App</h3>
-            <p>Built during my N2Mobil internship: sign up and log in, manage to-dos, create posts and
-              organize photo albums.</p>
-            <div class="tags"><span>Vue.js</span><span>Django REST</span><span>Auth</span></div>
-            <div class="links">
-              <a href="https://github.com/nisakocagenis/Todo-app-task-N2mobil" target="_blank">Code ↗</a>
-            </div>
-          </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="project glass tilt reveal">
-          <div class="media art art-pink">
-            <!-- VIDEO: record a demo (Mac: Cmd+Shift+5), save it as assets/videos/unitx-demo.mp4
-                 and it will appear here automatically. If the file is missing, the art below is shown. -->
-            <video class="auto-video" src="assets/videos/unitx-demo.mp4" muted loop playsinline preload="metadata"></video>
-            <span class="art-emoji">🧩</span>
-            <span class="badge">Internship</span>
-          </div>
-          <div class="p-body">
-            <h3>🎯 UNIT-X</h3>
-            <p>Recruitment platform with HR and applicant interfaces, a filterable candidate pool and
-              a candidate–job compatibility scoring system.</p>
-            <div class="tags"><span>React</span><span>.NET 8 Web API</span><span>Supabase</span></div>
-          </div>
-        </article>
-
-        <article class="project glass tilt reveal">
-          <div class="media art art-cyan">
-            <span class="art-emoji">🦜🔗</span>
-          </div>
-          <div class="p-body">
-            <h3>🤖 LLM Orchestration</h3>
-            <p>Hands-on work with LangChain: LLM orchestration and RAG (retrieval-augmented generation).</p>
-            <div class="tags"><span>LangChain</span><span>RAG</span><span>LLMs</span></div>
-            <div class="links">
-              <a href="https://github.com/nisakocagenis/llmorkestrasyonu-langchain" target="_blank">Code ↗</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
+      <article class="project reverse reveal">
+        <div class="p-media art">
+          <!-- VIDEO: save a short demo as assets/videos/unitx-demo.mp4 and it plays here automatically. -->
+          <video class="auto-video" src="assets/videos/unitx-demo.mp4" muted loop playsinline preload="metadata"></video>
+          <span class="art-mark">UNIT-X</span>
+        </div>
+        <div class="p-info">
+          <span class="p-index">04 / Internship</span>
+          <h3>UNIT-X</h3>
+          <p>A recruitment management platform with separate HR and applicant interfaces, a candidate pool
+            filterable by skills, experience and education, and a candidate–job compatibility score.</p>
+          <div class="tags"><span>React</span><span>Tailwind</span><span>.NET 8 Web API</span><span>Supabase</span></div>
+        </div>
+      </article>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
-      <h2 class="title reveal"><span class="emoji">🛠️</span> Skills</h2>
-      <div class="skills">
-        <div class="skill glass reveal" style="--c: var(--pink)">
-          <h3>🎨 Frontend</h3>
-          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Vue.js</span></div>
-        </div>
-        <div class="skill glass reveal" style="--c: var(--orange)">
-          <h3>💅 Styling</h3>
-          <div class="chips"><span>Tailwind CSS</span><span>Vuetify</span></div>
-        </div>
-        <div class="skill glass reveal" style="--c: var(--violet)">
-          <h3>⚙️ Backend</h3>
-          <div class="chips"><span>C# / .NET 8</span><span>Python</span><span>Django</span><span>REST API</span><span>Node.js</span><span>C</span></div>
-        </div>
-        <div class="skill glass reveal" style="--c: var(--cyan)">
-          <h3>🗄️ Databases</h3>
-          <div class="chips"><span>PostgreSQL</span><span>Supabase</span><span>MySQL</span><span>MongoDB</span></div>
-        </div>
-        <div class="skill glass reveal" style="--c: var(--green)">
-          <h3>📊 Machine Learning</h3>
-          <div class="chips"><span>NumPy</span><span>Pandas</span><span>Kaggle</span></div>
-        </div>
-        <div class="skill glass reveal" style="--c: var(--yellow)">
-          <h3>✨ AI-Assisted Dev</h3>
-          <div class="chips"><span>Claude Code</span><span>Claude Design</span><span>Codex</span><span>Antigravity</span></div>
-        </div>
+    <section id="skills" class="split">
+      <header class="sec-head reveal">
+        <span class="num">04</span>
+        <h2>Skills</h2>
+      </header>
+      <div class="sec-body skills">
+        <div class="skill reveal"><h3>Frontend</h3><p>HTML, CSS, JavaScript, TypeScript, React, Next.js, Vue.js</p></div>
+        <div class="skill reveal"><h3>Styling</h3><p>Tailwind CSS, Vuetify</p></div>
+        <div class="skill reveal"><h3>Backend</h3><p>C# / .NET 8 Web API, Python, Django, REST API, Node.js, C</p></div>
+        <div class="skill reveal"><h3>Databases</h3><p>PostgreSQL, Supabase, MySQL, MongoDB</p></div>
+        <div class="skill reveal"><h3>Machine Learning</h3><p>NumPy, Pandas, Kaggle</p></div>
+        <div class="skill reveal"><h3>AI-Assisted Development</h3><p>Claude Code, Claude Design, Codex, Antigravity</p></div>
       </div>
     </section>
 
     <!-- EDUCATION -->
-    <section id="education">
-      <h2 class="title reveal"><span class="emoji">🎓</span> Education</h2>
-      <div class="edu">
-        <div class="edu-card glass tilt reveal">
-          <span class="edu-icon">💻</span>
-          <h3>B.Sc. Computer Engineering</h3>
-          <p>Yaşar University</p>
-          <span class="pill">2022 – 2027 · 4th year</span>
+    <section id="education" class="split">
+      <header class="sec-head reveal">
+        <span class="num">05</span>
+        <h2>Education</h2>
+      </header>
+      <div class="sec-body">
+        <div class="edu reveal">
+          <div class="job-date">2022 — 2027</div>
+          <div><h3>B.Sc. Computer Engineering</h3><p>Yaşar University · 4th year</p></div>
         </div>
-        <div class="edu-card glass tilt reveal">
-          <span class="edu-icon">🏦</span>
-          <h3>Banking and Insurance</h3>
-          <p>Yaşar University</p>
-          <span class="pill">2025 – 2027 · 1st year</span>
+        <div class="edu reveal">
+          <div class="job-date">2025 — 2027</div>
+          <div><h3>Banking and Insurance</h3><p>Yaşar University · 1st year</p></div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <div class="cta glass reveal">
-        <h2>Let's build something <span class="grad">fun</span> together ✨</h2>
-        <p>I'm open to internships, part-time roles and collaborations.</p>
-        <div class="buttons center">
-          <button class="btn btn-glow confetti-btn" id="copyEmail" data-email="nisakocagens@hotmail.com">📬 Copy my email</button>
-          <a class="btn btn-ghost" href="mailto:nisakocagens@hotmail.com">Send an email</a>
-        </div>
-        <div class="socials">
-          <a href="https://github.com/nisakocagenis" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/nisakocagenis/" target="_blank">LinkedIn</a>
-          <a href="https://www.kaggle.com/nisakocageni" target="_blank">Kaggle</a>
-          <a href="cv/Nisa_Kocagenis_CV_EN.pdf" target="_blank">CV</a>
-        </div>
+    <section id="contact" class="contact">
+      <p class="eyebrow reveal">06 · Contact</p>
+      <h2 class="reveal">Let's build something<br><em>thoughtful</em> together.</h2>
+      <a class="mail reveal" href="mailto:nisakocagens@hotmail.com">nisakocagens@hotmail.com</a>
+      <div class="actions center reveal">
+        <button class="btn btn-solid" id="copyEmail" data-email="nisakocagens@hotmail.com">Copy email</button>
+        <a class="btn btn-line" href="cv/Nisa_Kocagenis_CV_EN.pdf" target="_blank">Résumé (EN)</a>
+        <a class="btn btn-line" href="cv/Nisa_Kocagenis_CV_TR.pdf" target="_blank">Résumé (TR)</a>
+      </div>
+      <div class="socials reveal">
+        <a href="https://github.com/nisakocagenis" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/nisakocagenis/" target="_blank">LinkedIn</a>
+        <a href="https://www.kaggle.com/nisakocageni" target="_blank">Kaggle</a>
       </div>
     </section>
 
   </main>
 
-  <footer>Made with 💜 and lots of ☕ by Nisa Kocageniş · © 2026</footer>
-  <div class="toast" id="toast">Email copied! 🎉</div>
-  <a class="to-top" id="toTop" href="#home" aria-label="Back to top">↑</a>
+  <footer>
+    <span>© 2026 Nisa Kocageniş</span>
+    <span>Designed &amp; built in İzmir</span>
+  </footer>
+
+  <!-- PIXEL ME: the little game character -->
+  <div class="game" id="game" aria-hidden="true">
+    <div class="player" id="player">
+      <div class="bubble" id="bubble"></div>
+      <canvas id="sprite"></canvas>
+      <div class="shadow" id="shadow"></div>
+    </div>
+  </div>
+  <div class="game-hint" id="gameHint">
+    <span class="hint-text" id="hintText">← → walk · ↑ jump · click to send me</span>
+    <button id="gameToggle">Hide me</button>
+  </div>
+
+  <div class="toast" id="toast">Email copied</div>
 
   <script src="script.js"></script>
+  <script src="pixel-me.js"></script>
 </body>
 </html>
